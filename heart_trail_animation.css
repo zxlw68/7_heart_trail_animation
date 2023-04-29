@@ -1,0 +1,47 @@
+body{
+    margin: 0;
+    height: 100vh;
+    background-color: black;
+    overflow: hidden; /*hide scroll bar*/
+
+}
+
+span{
+    background: url('heart.png');
+    width: 100px;
+    height: 100px;
+    position: absolute;
+
+    pointer-events: none; /*double heart*/
+
+    background-size: cover;  /* increase the size of the image to fit the container */
+
+    left: 50%; /* left side in the middle of the screen*/
+    top: 50%;
+
+    transform: translate(-50%, -50%); /*bring in the middle */
+    animation: animate 6s linear;
+
+
+    
+}
+
+
+/* keyframe query */
+
+@keyframes animate {
+    0% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        filter: hue-rotate(0) /* change color*/
+
+
+    }
+    100% {
+        transform: translate(-50%, -5000%); /*y bring hearts outside of the window hearts going up */
+        opacity: 0;
+        filter: hue-rotate(720deg)
+
+
+    }
+} 
